@@ -41,12 +41,16 @@ cd target
 ```
 then list all files with ls command and find achartengine-1.2.0.jar <br/>
 
-now open your android studio project, move to build.gradle.kts and in the
-dependencies block you need to add <br/>
+now open your android studio project, <br/>
+go from "Android" project hierarchy to "Project" hierarchy. <br/>
+right click on "app" folder and create new directory "libs" <br/>
+move your compiled "achartengine-1.2.0.jar" file to "libs" folder <br/>
+then move to "build.gradle.kts" in your app folder. 
+in the dependencies block you need to add <br/>
 ```sh
 dependencies {
   //noinspection GradlePath
-  implementation(files("your_custom_path/achartengine/achartengine/target/achartengine-1.2.0.jar"))
+  implementation(files("libs/achartengine-1.2.0.jar"))
 }
 ```
 
