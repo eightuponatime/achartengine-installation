@@ -4,8 +4,8 @@
 Need to install maven from https://maven.apache.org/download.cgi
 
 ## maven unpacking
-Unpack inner folder to path "C:\apache-maven-3.9.9" < br / >
-Add path "C:\apache-maven-3.9.9\bin" to system variables < br / >
+Unpack inner folder to path "C:\apache-maven-3.9.9" <br/>
+Add path "C:\apache-maven-3.9.9\bin" to system variables <br/>
 Check installation by typing in the terminal < br / >
 ```mvn --version``` 
 
