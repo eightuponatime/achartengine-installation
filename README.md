@@ -55,3 +55,11 @@ dependencies {
 ```
 
 than just sync gradle and you're ready to go!<br/>
+
+and because we will use a special activity for drawing graphics "org.achartengine.GraphicalActivity"
+we need to declare it in the manifest. Don't forget to specify the name of the project
+```sh
+<activity
+	android:name="org.achartengine.GraphicalActivity"
+	android:theme="@style/Theme.YOUR_PROJECT_NAME" />
+```
