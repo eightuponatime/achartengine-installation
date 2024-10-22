@@ -1,6 +1,9 @@
 # achartengine-installation
 
+### maven installation
 Need to install maven from https://maven.apache.org/download.cgi
+
+### maven unpacking
 Unpack inner folder to path "C:\apache-maven-3.9.9"
 Add path "C:\apache-maven-3.9.9\bin" to system variables
 Check installation by typing in the terminal
