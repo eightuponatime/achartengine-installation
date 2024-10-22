@@ -1,4 +1,4 @@
-# achartengine-installation
+# AChartEngine installation guide
 
 ## maven installation
 Need to install maven from https://maven.apache.org/download.cgi
