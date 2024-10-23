@@ -36,7 +36,7 @@ cd achartengine/achartengine
 ```sh
 mvn package
 ```
-2. Once the process completes, navigate to the target directory:<br/>
+2. Once the process completes, navigate to the `achartengine/achartengine/target` directory:<br/>
 ```sh
 cd target
 ```
