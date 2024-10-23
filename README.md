@@ -46,7 +46,7 @@ ls
 ```
 4. Look for the file `achartengine-1.2.0.jar`<br/>
 
-## Adding AChartEngine to Your Android Studio Project
+## Adding AChartEngine to your Android Studio Project
 1. Open your Android Studio project.<br/>
 2. Switch to the `Project` view (instead of the default `Android` view) from the project hierarchy panel.<br/>
 3. Right-click the `app` directory and create a new folder named `libs`.<br/>
@@ -71,4 +71,4 @@ Since you'll be using the GraphicalActivity class for rendering charts, you need
 ```
 
 
-That's it! Once these steps are completed, you should be ready to start using AChartEngine in your project.
+Once these steps are completed, you should be ready to start using AChartEngine in your project.
