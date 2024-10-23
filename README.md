@@ -10,7 +10,7 @@
 
 ## Downloading AChartEngine
 1. Clone the AChartEngine library repository: <br/>
-   - Open a terminal, navigate to an any desired directory, and run: <br/>
+   - Open a terminal, navigate to any desired directory, and run: <br/>
 ```sh
 git clone https://github.com/ddanny/achartengine.git
 cd achartengine/achartengine
