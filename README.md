@@ -15,7 +15,7 @@
 git clone https://github.com/ddanny/achartengine.git
 cd achartengine/achartengine
 ```
-2. Open the pom.xml file (located in the achartengine/achartengine directory) in a text editor. <br/>
+2. Open the `pom.xml` file (located in the `achartengine/achartengine` directory) in a text editor. <br/>
 3. Find the following lines in the file: <br/>
 ```sh
 <configuration>
@@ -23,7 +23,7 @@ cd achartengine/achartengine
     <target>1.6</target>
 </configuration>
 ```
-4. Update the Java source and target version from 1.6 to 1.7: <br/>
+4. Update the Java source and target version from `1.6` to `1.7`: <br/>
 ```sh
 <configuration>
     <source>1.7</source>
@@ -32,7 +32,7 @@ cd achartengine/achartengine
 ```
 
 ## Compiling AChartEngine
-1. After modifying the pom.xml file, compile the library to generate a JAR file:<br/>
+1. After modifying the `pom.xml` file, compile the library to generate a JAR file:<br/>
 ```sh
 mvn package
 ```
