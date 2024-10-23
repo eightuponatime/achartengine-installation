@@ -1,65 +1,74 @@
 # AChartEngine installation guide
 
-## maven installation
-Need to install maven from https://maven.apache.org/download.cgi
+## Installing Maven
+1. Download Maven from the official website: https://maven.apache.org/download.cgi <br/>
+2. Extract the downloaded archive to a directory on your system, for example: C:\apache-maven-3.9.9 <br/>
+3. Add the Maven "bin" directory to your system's PATH environment variable: <br/>
+   - Add "C:\apache-maven-3.9.9\bin" to the system environment variables. <br/>
+4. Verify the installation by running the following command in a terminal: <br/>
+```mvn --version```
 
-## maven unpacking
-Unpack archived folder to path "C:\apache-maven-3.9.9" <br/>
-Add path "C:\apache-maven-3.9.9\bin" to system variables <br/>
-Check installation by typing in the terminal <br/>
-```mvn --version``` 
-
-## download AChartEngine
-Then we need to install AChartEngine library to any place in our system. <br/>
-Move to any prepared dir, than type: <br/>
+## Downloading AChartEngine
+1. Clone the AChartEngine library repository: <br/>
+   -Open a terminal, navigate to an any desired directory, and run: <br/>
 ```sh
 git clone https://github.com/ddanny/achartengine.git
 cd achartengine/achartengine
 ```
-Then you need to open file pom.xml and find the lines:
+2. Open the pom.xml file (located in the achartengine/achartengine directory) in a text editor. <br/>
+3. Find the following lines in the file: <br/>
 ```sh
 <configuration>
-	<source>1.6</source>
-	<target>1.6</target>
+    <source>1.6</source>
+    <target>1.6</target>
 </configuration>
 ```
-Then you need to change source and target values to 1.7 <br/>
+4. Update the Java source and target version from 1.6 to 1.7: <br/>
 ```sh
 <configuration>
-	<source>1.7</source>
-	<target>1.7</target>
+    <source>1.7</source>
+    <target>1.7</target>
 </configuration>
 ```
 
-then type a command to compile a library and generate a jar file <br/>
+## Compiling AChartEngine
+1. After modifying the pom.xml file, compile the library to generate a JAR file:<br/>
 ```sh
 mvn package
 ```
-then you can type <br/>
+2. Once the process completes, navigate to the target directory:<br/>
 ```sh
 cd target
 ```
-then list all files with ls command and find achartengine-1.2.0.jar <br/>
+3. List the files in this directory by running:<br/>
+```sh
+ls
+```
+4. Look for the file "achartengine-1.2.0.jar"<br/>
 
-now open your android studio project, <br/>
-go from "Android" project hierarchy to "Project" hierarchy. <br/>
-right click on "app" folder and create new directory "libs" <br/>
-move your compiled "achartengine-1.2.0.jar" file to "libs" folder <br/>
-then move to "build.gradle.kts" in your app folder. 
-in the dependencies block you need to add <br/>
+## Adding AChartEngine to Your Android Studio Project
+1. Open your Android Studio project.<br/>
+2. Switch to the "Project" view (instead of the default "Android" view) from the project hierarchy panel.<br/>
+3. Right-click the "app" directory and create a new folder named "libs".<br/>
+4. Move the "achartengine-1.2.0.jar" file you generated earlier into the "libs" folder.<br/>
+5. Open the "build.gradle.kts" file in the "app" folder.<br/>
+6. In the "dependencies" block, add the following line to include the AChartEngine library:<br/>
 ```sh
 dependencies {
-  //noinspection GradlePath
-  implementation(files("libs/achartengine-1.2.0.jar"))
+    implementation(files("libs/achartengine-1.2.0.jar"))
 }
 ```
+7. Sync the Gradle project to apply the changes.<br/>
 
-than just sync gradle and you're ready to go!<br/>
-
-and because we will use a special activity for drawing graphics "org.achartengine.GraphicalActivity"
-we need to declare it in the manifest. Don't forget to specify the name of the project
+## Declaring the GraphicalActivity in the Manifest
+Since you'll be using the GraphicalActivity class for rendering charts, you need to declare it in your Android manifest file.<br/>
+1. Open the "AndroidManifest.xml" file.<br/>
+2. Add the following activity declaration, replacing YOUR_PROJECT_NAME with the actual theme name of your project:<br/>
 ```sh
 <activity
-	android:name="org.achartengine.GraphicalActivity"
-	android:theme="@style/Theme.YOUR_PROJECT_NAME" />
+    android:name="org.achartengine.GraphicalActivity"
+    android:theme="@style/Theme.YOUR_PROJECT_NAME" />
 ```
+
+
+That's it! Once these steps are completed, you should be ready to start using AChartEngine in your project.
