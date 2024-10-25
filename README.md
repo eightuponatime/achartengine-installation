@@ -51,7 +51,7 @@ ls
 2. Switch to the `Project` view (instead of the default `Android` view) from the project hierarchy panel.<br/>
 3. Right-click the `app` directory and create a new folder named `libs`.<br/>
 4. Move the `achartengine-1.2.0.jar` file you generated earlier into the `libs` folder.<br/>
-5. Open the `build.gradle.kts` file in the `app` folder.<br/>
+5. Open the `build.gradle.kts:app`.<br/>
 6. In the `dependencies` block, add the following line to include the AChartEngine library:<br/>
 ```sh
 dependencies {
